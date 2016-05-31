@@ -4,7 +4,7 @@ module NumeralsTranslatorCases
   ]
 
   VALID = [
-    [-123798], "negative one hundred twenty three thousand seven hundred ninety eight",
+    [-123798, "negative one hundred twenty three thousand seven hundred ninety eight"],
     [--100, "negative one hundred"],
     [-100, "negative one hundred"],
     [-99, "negative ninety nine"],
