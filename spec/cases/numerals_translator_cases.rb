@@ -5,13 +5,13 @@ module NumeralsTranslatorCases
 
   VALID = [
     [-123798, "negative one hundred twenty three thousand seven hundred ninety eight"],
-    [--100, "negative one hundred"],
+    [--100, "one hundred"],
     [-100, "negative one hundred"],
     [-99, "negative ninety nine"],
     [0, "zero"],
     [1, "one"],
     [11, "eleven"],
-    [53, "fifty-three"],
+    [53, "fifty three"],
     [100, "one hundred"],
     [101, "one hundred one"],
     [111, "one hundred eleven"],
