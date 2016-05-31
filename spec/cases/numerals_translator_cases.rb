@@ -1,6 +1,6 @@
 module NumeralsTranslatorCases
   INVALID = [
-    '.', '@', nil, true, false, '-', '+', '1', '-1', 1.23, 'abcd'
+    '.', '@', nil, true, false, '-', '+', 1.23, 'abcd'
   ]
 
   VALID = [

@@ -32,4 +32,6 @@ module NumeralsTranslator
     2          => "two",
     1          => "one"
   }
+
+  VALID_NUMERAL = /\A[-+]?\d+\z/
 end
