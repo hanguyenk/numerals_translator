@@ -1,5 +1,5 @@
-require 'exceptions/invalid_number'
-require 'numerals_translator/words_mapping'
+require_relative'exceptions/invalid_number'
+require_relative 'numerals_translator/words_mapping'
 
 module NumeralsTranslator
   def self.translate(number)
