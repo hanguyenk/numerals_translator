@@ -7,7 +7,9 @@ module NumeralsTranslator
 
     return "zero" if number == 0
 
-    to_word(number.abs)
+    output = ""
+    output << "negative " if number < 0
+    output << to_word(number.abs)
   end
 
   def self.to_word(number)
