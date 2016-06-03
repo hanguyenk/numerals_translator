@@ -19,19 +19,15 @@ module NumeralsTranslator
     NumeralsTranslator::WORDS_MAPPING.each do |unit, word|
       return if number == 0
 
-      return word if (number < 10) && (number/unit > 0)
+      div, mod = number.divmod(unit)
 
-      if (number < 100) && (number/unit > 0)
-        if (number%unit == 0)
-          return word
-        else
-          return "#{word} #{to_word(number%unit)}"
-        end
+      return word if (number < 10) && (div > 0)
+
+      if (number < 100) && (div > 0)
+        return (mod == 0) ? word : "#{word} #{to_word(mod)}"
       end
 
-      if (number/unit > 0)
-        return "#{to_word(number/unit)} #{word} #{to_word(number%unit)}"
-      end
+      return "#{to_word(div)} #{word} #{to_word(mod)}" if (div > 0)
     end
   end
 end
