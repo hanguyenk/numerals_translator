@@ -6,5 +6,10 @@ module NumeralsTranslator
     raise InvalidNumber unless number.is_a? Integer
 
     return "zero" if number == 0
+
+    to_word(number.abs)
+  end
+
+  def self.to_word(number)
   end
 end
