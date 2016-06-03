@@ -3,7 +3,8 @@ require_relative 'numerals_translator/words_mapping'
 
 module NumeralsTranslator
   def self.translate(number)
-    raise InvalidNumber unless number.is_a? Integer
+    raise InvalidNumber unless number.to_s =~ NumeralsTranslator::VALID_NUMERAL
+    number = number.to_i
 
     return "zero" if number == 0
 
