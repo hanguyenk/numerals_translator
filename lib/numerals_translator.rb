@@ -10,6 +10,7 @@ module NumeralsTranslator
     output = ""
     output << "negative " if number < 0
     output << to_word(number.abs)
+    output.strip
   end
 
   def self.to_word(number)
