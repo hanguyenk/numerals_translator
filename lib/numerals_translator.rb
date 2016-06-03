@@ -8,10 +8,11 @@ module NumeralsTranslator
 
     return "zero" if number == 0
 
-    output = ""
-    output << "negative " if number < 0
-    output << to_word(number.abs)
-    output.strip
+    "#{prefix(number)}#{to_word(number.abs)}".strip
+  end
+
+  def self.prefix(number)
+    "negative " if number < 0
   end
 
   def self.to_word(number)
